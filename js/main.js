@@ -1,5 +1,4 @@
-$(document).ready(function(){
-
+$(document).ready(function(){		
 		$('.dateRangePicker').daterangepicker({
 		      autoUpdateInput: false,
 		      locale: {
@@ -48,4 +47,19 @@ $(document).ready(function(){
 	        }
 	    });
 	  });
-	})
+
+//************************ Initialize Firebase *********************//
+	  var config = {
+	    apiKey: "AIzaSyAmpsaHBe-JSRoBxc-WRK9VU9xF4u3wNoE",
+	    authDomain: "travelhands-3903d.firebaseapp.com",
+	    databaseURL: "https://travelhands-3903d.firebaseio.com",
+	    storageBucket: "travelhands-3903d.appspot.com",
+	  };
+	  firebase.initializeApp(config);
+
+	  firebase.database().ref('/organizationInfo').once('value').then(function(snapshot) {
+	  	console.log(snapshot.val());	
+		  var orgName = snapshot.child('orgName').val();
+		  console.log(orgName);		
+		});
+})

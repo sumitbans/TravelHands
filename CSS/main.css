@@ -15,7 +15,7 @@ h4 {
   line-height: 1.375em;
   color: #303030;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 .jumbotron {
   background-color: #f4511e;
@@ -244,5 +244,21 @@ footer .glyphicon {
 }
 
 .orgImage{
-	width:30%;
+	float: left;
+    text-align: center;
+    width: 30%;
+}
+
+.orgImages{
+	width:60%;
+}
+
+.orgDetails{
+	width:65%;
+	float:right;
+}
+
+.orgDesc{
+	font-style: italic;
+	font-weight: bold;
 }

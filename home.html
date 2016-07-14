@@ -15,12 +15,16 @@
 	  <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="Assets/font-awesome-4.6.3/css/font-awesome.min.css">
-	  <script type="text/javascript" src="js/main.js"></script>
+	  <!--<script type="text/javascript" src="js/main.js"></script>-->
 	  <link rel="stylesheet" type="text/css" href="CSS/main.css" />
-	  
+	  <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
 	</head>
 
 	<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<script>
+	 
+	</script>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container">
@@ -47,11 +51,16 @@
 	<div class="jumbotron text-center">
 	  <h1>TravelHands</h1>
 	  <p>Make a Difference one Vacation at a time</p>
-	  <form id="searchForm" class="form-inline">
+	  <form id="searchForm" class="form-inline" method="post" onsubmit="return showOrganizations()">
 	  	<input id="dateRangePicker" type="text" class="dateRangePicker form-control" size="50" placeholder="Vacation dates" required>
-	    <button type="button" class="btn btn-danger">Search for Opportunities</button>
+	    <input id="searchButton" type="submit" class="btn btn-danger" ></button>
 	  </form>
 	</div>
+
+
+<!--<form name="form1" id="form1" method="post" onsubmit="return redirect()">  
+  <input type="submit" class="button4" name="order" id="order" value="Place Order" >
+</form>-->
 
 	<!-- Container (About Section) -->
 	<div id="about" class="container-fluid">
@@ -192,7 +201,7 @@
 	<!--<div id="googleMap" style="height:400px;width:100%;"></div> -->
 
 	<!-- Add Google Maps -->
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<!--<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script>
 	var myCenter = new google.maps.LatLng(41.878114, -87.629798);
 
@@ -215,6 +224,79 @@
 	}
 
 	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>-->
+
+	<script>
+		$(document).ready(function(){		
+				$('.dateRangePicker').daterangepicker({
+				      autoUpdateInput: false,
+				      locale: {
+				          cancelLabel: 'Clear'
+				      }
+				  });
+
+				  $('#dateRangePicker').on('apply.daterangepicker', function(ev, picker) {
+				      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+				  });
+
+				  $('#dateRangePicker').on('cancel.daterangepicker', function(ev, picker) {
+				      $(this).val('');
+				  });
+
+
+			  // Add smooth scrolling to all links in navbar + footer link
+			  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+			    // Make sure this.hash has a value before overriding default behavior
+			    if (this.hash !== "") {
+			      // Prevent default anchor click behavior
+			      event.preventDefault();
+
+			      // Store hash
+			      var hash = this.hash;
+
+			      // Using jQuery's animate() method to add smooth page scroll
+			      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+			      $('html, body').animate({
+			        scrollTop: $(hash).offset().top
+			      }, 900, function(){
+			   
+			        // Add hash (#) to URL when done scrolling (default click behavior)
+			        window.location.hash = hash;
+			      });
+			    } // End if
+			  });
+			  
+			  $(window).scroll(function() {
+			    $(".slideanim").each(function(){
+			      var pos = $(this).offset().top;
+
+			      var winTop = $(window).scrollTop();
+			        if (pos < winTop + 600) {
+			          $(this).addClass("slide");
+			        }
+			    });
+			  });
+
+			  $("#searchForm").on("submit",function(){
+			    window.location.replace("organization.html");
+			    return false;
+			  });
+
+		//************************ Initialize Firebase *********************//
+			  var config = {
+			    apiKey: "AIzaSyAmpsaHBe-JSRoBxc-WRK9VU9xF4u3wNoE",
+			    authDomain: "travelhands-3903d.firebaseapp.com",
+			    databaseURL: "https://travelhands-3903d.firebaseio.com",
+			    storageBucket: "travelhands-3903d.appspot.com",
+			  };
+			  firebase.initializeApp(config);
+
+			  firebase.database().ref('/organizationInfo').once('value').then(function(snapshot) {
+			  	console.log(snapshot.val());	
+				  var orgName = snapshot.child('orgName').val();
+				  console.log(orgName);		
+				});
+		})
 	</script>
 
 	<footer class="footer-distributed">

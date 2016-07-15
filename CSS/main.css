@@ -132,6 +132,9 @@ h4 {
   border-color: transparent;
   color: #fff !important;
 }
+.navbar-logo {
+width: 50px;
+}
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
@@ -223,6 +226,10 @@ footer .glyphicon {
 }
 .btn-lg {
     width: 100%;
+    margin-bottom: 35px;
+}
+.btn-lg2 {
+    width="300%";
     margin-bottom: 35px;
 }
 }

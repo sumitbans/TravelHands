@@ -15,7 +15,6 @@
 	  <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="Assets/font-awesome-4.6.3/css/font-awesome.min.css">
-	  <!--<script type="text/javascript" src="js/main.js"></script>-->
 	  <link rel="stylesheet" type="text/css" href="CSS/main.css" />
 	  <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
 	</head>
@@ -28,24 +27,19 @@
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="#myPage"><img style="height:inherit; margin-top:-15px" src="Assets/travel_hands_logo.png"></img></a>
-	    </div>
-	    <div class="collapse navbar-collapse" id="myNavbar">
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#about">ABOUT</a></li>
-	        <li><a href="#partners">ORGANIZATIONS</a></li>
-	        <li><a href="#">LOGIN</a></li>
-	        <!--<li><a href="#pricing">PRICING</a></li>-->
-	        <!--<li><a href="#contact">CONTACT</a></li>-->
-	      </ul>
-	    </div>
-	  </div>
+		    <div class="navbar-header">
+		      	<a class="navbar-brand" href="#myPage"><img style="height:inherit; margin-top:-15px" src="Assets/travel_hands_logo.png"></img></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#about">ABOUT</a></li>
+		        <li><a href="#partners">ORGANIZATIONS</a></li>
+		        <li><a href="#">LOGIN</a></li>
+		        <!--<li><a href="#pricing">PRICING</a></li>-->
+		        <!--<li><a href="#contact">CONTACT</a></li>-->
+		      </ul>
+		    </div>
+	  	</div>
 	</nav>
 
 	<div class="jumbotron text-center">
@@ -62,33 +56,122 @@
   <input type="submit" class="button4" name="order" id="order" value="Place Order" >
 </form>-->
 
+	<!-- Container (Give a Hand section) -->
+	<div id="GiveAHand" class="container-fluid">
+	  <div class="row">
+	    <div class="col-sm-8">
+	      <h2>Give a Hand !</h2><br>
+	      <h4>Do you want to do some good while travelling ? Here is how to proceed :</h4><br>
+		  <h4>
+		  <ul>
+			<li>Provide your vacation dates and location above</li>
+			<li>Select one of the projects available during your journey</li>
+			<li>Book your slot, pay the security deposit and wait for NGOs confirmation</li>
+			<li>Live your experience !</li>
+			<li>You can have your security deposit back after the event if you wish</li>
+		  </ul></h4>
+		  <h4>All profits we make are donated to the NGOs</h4>
+	      <p></p>
+	      <br><button class="btn btn-default btn-lg">More Details...</button>
+	    </div>
+	    <div class="col-sm-4">
+	      <img class="image75" src="Assets/LogoTravelHands.png" />
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- Container (Partners Section) -->
+	<div id="partners" class="container-fluid text-center bg-grey">
+	  <h2>Partner Organizations</h2><br>
+	  <!--<h4>What we have created</h4>-->
+	  <div class="row text-center slideanim">
+	    <div class="col-sm-4">
+	      <div class="thumbnail">
+	        <img src="Assets/NGOpictures/nice.png" alt="France" width="400" height="300">
+	        <p><strong>Actions du coeur</strong></p>
+	        <p>Nice</p>
+			<br><button class="btn btn-default btn-lg2" onclick="location.href='http://try.travelhands.org/actions-du-coeur-homeless-feeding/'">Go!</button>
+	      </div>
+	    </div>
+	    <div class="col-sm-4">
+	      <div class="thumbnail">
+	        <img src="Assets/NGOpictures/delhi.jpg" alt="Greece" width="400" height="300">
+	        <p><strong>Digital Nomads</strong></p>
+	        <p>Lesvos</p>
+			<br><button class="btn btn-default btn-lg2" onclick="location.href='http://digitalnomadslesvos.com/'" >Go!</button>
+	      </div>
+	    </div>
+	    <div class="col-sm-4">
+	      <div class="thumbnail">
+	        <img src="Assets/NGOpictures/lesvos.png" alt="India" width="400" height="300">
+	        <p><strong>Dis-is-ability</strong></p>
+	        <p>Delhi</p>
+			<br><button class="btn btn-default btn-lg2" onclick="location.href='http://www.renuvidyamandir.in/#home'">Go!</button>
+	      </div>
+	    </div>
+	  </div><br>
+	  
+	  <h2>What travellers say</h2>
+	  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+	    <!-- Indicators -->
+	    <ol class="carousel-indicators">
+	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	      <li data-target="#myCarousel" data-slide-to="1"></li>
+	      <li data-target="#myCarousel" data-slide-to="2"></li>
+	    </ol>
+
+	    <!-- Wrapper for slides -->
+	    <div class="carousel-inner" role="listbox">
+	      <div class="item active">
+	        <h4>"I lived an amazing experience in Delhi and met friendly people"<br><span style="font-style:normal;">Michael Roe, Boston, Engineer</span></h4>
+	      </div>
+	      <div class="item">
+	        <h4>"I understood that helping people makes me feel better, thank you Travelling Hands !"<br><span style="font-style:normal;">Yasmine Ibrahimi, Morocco, Retired</span></h4>
+	      </div>
+	      <div class="item">
+	        <h4>"Could I... BE any more happy with those amazing experiences ?"<br><span style="font-style:normal;">Goerges Jean, France, Artist</span></h4>
+	      </div>
+	    </div>
+
+	    <!-- Left and right controls -->
+	    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	      <span class="sr-only">Previous</span>
+	    </a>
+	    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	      <span class="sr-only">Next</span>
+	    </a>
+	  </div>
+	</div>
+	
 	<!-- Container (About Section) -->
 	<div id="about" class="container-fluid">
 	  <div class="row">
 	    <div class="col-sm-8">
-	      <h2>About Company Page</h2><br>
-	      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+	      <h2>About Travel Hands</h2><br>
+	      <h4>Travel Hands is a non profit startup launched on July 2016 that provides an on-line marketplace for travellers and local NGOs</h4><br>
+	      <h2>Our Values</h2><br>
+	      <h4><strong>MISSION:</strong> TravelHands provides travellers and NGOs with a marketplace for short term social good activities and genuine experiences.</h4><br>
+	      <h4><strong>VISION:</strong> TravelHands helps people to do good while travelling and make a difference to local communities by spending a short part of their holidays working on local projects.  Travellers become part of a community of peers. This community crowd-funds new NGO projects.</h4><br>
+		  <p></p>
+	      <br><button class="btn btn-default btn-lg">More Details...</button>
 	    </div>
 	    <div class="col-sm-4">
-	      <img class="image75" src="Assets/Logo.jpg" />
+	      <img class="image75" src="Assets/team.png" />
 	    </div>
 	  </div>
 	</div>
 
-	<div class="container-fluid bg-grey">
+	<div class="container-fluid bg-grey" >
 	  <div class="row">
 	    <div class="col-sm-4">
 	    	<img src="Assets/world-hands.jpg" class="image75 slideanim" />
 	     <!-- <span class="glyphicon glyphicon-globe logo slideanim"></span> -->
 	    </div>
 	    <div class="col-sm-8">
-	      <h2>Our Values</h2><br>
-	      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-	      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	    </div>
+		<br><button class="btn btn-default btn-lg2" style="width: inherit" onclick="location.href='http://try.travelhands.org/'" >Get In Touch</button>
+	      </div>
 	  </div>
 	</div>
 
@@ -134,67 +217,7 @@
 	  </div>
 	</div>-->
 
-	<!-- Container (Partners Section) -->
-	<div id="partners" class="container-fluid text-center bg-grey">
-	  <h2>Partner Organizations</h2><br>
-	  <!--<h4>What we have created</h4>-->
-	  <div class="row text-center slideanim">
-	    <div class="col-sm-4">
-	      <div class="thumbnail">
-	        <img src="paris.jpg" alt="Paris" width="400" height="300">
-	        <p><strong>Paris</strong></p>
-	        <p>Yes, we built Paris</p>
-	      </div>
-	    </div>
-	    <div class="col-sm-4">
-	      <div class="thumbnail">
-	        <img src="newyork.jpg" alt="New York" width="400" height="300">
-	        <p><strong>New York</strong></p>
-	        <p>We built New York</p>
-	      </div>
-	    </div>
-	    <div class="col-sm-4">
-	      <div class="thumbnail">
-	        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-	        <p><strong>San Francisco</strong></p>
-	        <p>Yes, San Fran is ours</p>
-	      </div>
-	    </div>
-	  </div><br>
-	  
-	  <h2>What our customers say</h2>
-	  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-	    <!-- Indicators -->
-	    <ol class="carousel-indicators">
-	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	      <li data-target="#myCarousel" data-slide-to="1"></li>
-	      <li data-target="#myCarousel" data-slide-to="2"></li>
-	    </ol>
-
-	    <!-- Wrapper for slides -->
-	    <div class="carousel-inner" role="listbox">
-	      <div class="item active">
-	        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
-	      </div>
-	      <div class="item">
-	        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
-	      </div>
-	      <div class="item">
-	        <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
-	      </div>
-	    </div>
-
-	    <!-- Left and right controls -->
-	    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-	      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	      <span class="sr-only">Previous</span>
-	    </a>
-	    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-	      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	      <span class="sr-only">Next</span>
-	    </a>
-	  </div>
-	</div>
+	
 
 
 

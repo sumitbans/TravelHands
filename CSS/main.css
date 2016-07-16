@@ -194,7 +194,13 @@ footer .glyphicon {
     margin-right: 1.5em;
 }
 
+.float-right{
+	float:right;
+}
 
+.float-left{
+	float:left;
+}
 
 @keyframes slide {
 0% {
@@ -262,3 +268,30 @@ footer .glyphicon {
 	font-style: italic;
 	font-weight: bold;
 }
+
+/*****************************commit.html**************************/
+.orgDescJumbo{
+	text-align:center;
+}
+
+.descText{
+	font-style:italic;
+}
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #d9534f;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  font-size:30px
+  border-radius:5px;
+  }
+
+  .align-center{
+  	text-align:center;
+  }

@@ -31,7 +31,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#myPage">Logo</a>
+		      <a class="navbar-brand" href="#myPage"><img style="height:inherit; margin-top:-15px" src="Assets/travel_hands_logo.png"></img></a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
@@ -146,6 +146,7 @@
 	</script>
 
 	<script>
+
 		$(document).ready(function(){		
 				
 			  // Add smooth scrolling to all links in navbar + footer link
@@ -181,6 +182,7 @@
 			    });
 			  });
 
+		
 		//************************ Initialize Firebase *********************//
 			  var config = {
 			    apiKey: "AIzaSyAmpsaHBe-JSRoBxc-WRK9VU9xF4u3wNoE",
@@ -192,29 +194,11 @@
 
 			  firebase.database().ref('/organizationInfo').once('value').then(function(snapshot) {
 			  	console.log(snapshot.val());	
-				//var orgName = snapshot.child('orgName').val();
-				//  console.log(orgName);		
-
-				snapshot.forEach(function(childSnapshot) {
-				    var key = childSnapshot.key();
-				    // childData will be the actual contents of the child
-				    var childData = childSnapshot.val();
-				    console.log(key + "   " + childData);
-				  });
-
-				/*<div id="orgName1">Renu Vidya Mandir</div>
-				<div id="orgDescription1">A non-profit organization catering to the needs of Disabled children. Providing them supportive and nurturing environment to become independent.</div>
-				<div id="orgProjectName1">Dis-is-ability</div>
-				<div id="orgProjDesc1">we regularly need volunteers to help us impart vocational knowledge to these special kids. skills we look for range from anything related to academics to personal growth.</div>
-				<div id="orgAddress1">Sonepat, Haryana, India</div>
-				<div id="orgcommitReq1">6 Hours, anyday Monday to Friday</div>
-				<div id="orgSince1">Operating since 1994</div>
-				<div id="orgEmail1">renu.vidya.mandir@gmail.com</div>
-				<div id="orgCert1">12345-678-9045 accredited by Delhi Govt.</div>*/
-
-
+				  var orgName = snapshot.child('orgName').val();
+				  console.log(orgName);		
 				});
-		})
+
+		});
 	</script>
 	<footer class="footer-distributed">
 

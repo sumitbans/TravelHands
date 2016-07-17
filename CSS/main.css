@@ -254,6 +254,7 @@ footer .glyphicon {
 
 .projectDiv{
 	padding:20px;
+  border-bottom:1px dashed;
 }
 
 .orgImage{

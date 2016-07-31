@@ -31,11 +31,11 @@
 		      <ul class="nav navbar-nav navbar-right">
 		        <li><a href="#about">ABOUT</a></li>
 		        <li><a href="#partners">ORGANIZATIONS</a></li>
-		        <li><a href="#">LOGIN</a></li>
+		        <li><a href="#" data-toggle="popover" data-placement="bottom" title="Login">LOGIN</a></li>
 		      </ul>
 		    </div>
 	  	</div>
-	</nav>
+	</nav>	
 
 	<div class="jumbotron text-center">
 	  <h1>TravelHands</h1>
@@ -44,7 +44,7 @@
 	  	<input id="dateRangePicker" type="text" class="dateRangePicker form-control" size="50" placeholder="Vacation dates" required></input>
 	  	<input type="hidden" name="startDate"></input>
 	  	<input type="hidden" name="endDate"></input>
-	    <input id="searchButton" type="submit" class="btn btn-danger" ></input>
+	    <input id="searchButton" type="submit" class="btn btn-danger" value="Search"></input>
 	  </form>
 	</div>
 
@@ -186,7 +186,7 @@
 
 			$('#dateRangePicker').on('cancel.daterangepicker', function(ev, picker) {
 			    $(this).val('');
-			});
+			});			
 		})
 	</script>
 

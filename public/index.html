@@ -40,10 +40,8 @@
 	<div class="jumbotron text-center">
 	  <h1>TravelHands</h1>
 	  <p>Make a Difference one Vacation at a time</p>
-	  <form id="searchForm" class="form-inline" action="organization.html">
+	  <form id="searchForm" class="form-inline" method="post" onsubmit="return showOrganizations()">
 	  	<input id="dateRangePicker" type="text" class="dateRangePicker form-control" size="50" placeholder="Vacation dates" required></input>
-	  	<input type="hidden" name="startDate"></input>
-	  	<input type="hidden" name="endDate"></input>
 	    <input id="searchButton" type="submit" class="btn btn-danger" ></input>
 	  </form>
 	</div>
@@ -177,11 +175,7 @@
 			  });
 
 			$('#dateRangePicker').on('apply.daterangepicker', function(ev, picker) {
-			    $(this).val(picker.startDate.format('MMM DD YYYY') + ' - ' + picker.endDate.format('MMM DD YYYY'));
-			  	var startDate = picker.startDate.format('MMM DD YYYY');
-				var endDate = picker.endDate.format('MMM DD YYYY');
-				$('input[name=startDate]').val(startDate);
-				$('input[name=endDate]').val(endDate);
+			    $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
 			});
 
 			$('#dateRangePicker').on('cancel.daterangepicker', function(ev, picker) {

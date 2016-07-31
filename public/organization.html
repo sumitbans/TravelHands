@@ -22,68 +22,8 @@
 
 	<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-	<nav class="navbar navbar-default navbar-fixed-top">
-	  	<div class="container">
-		    <div class="navbar-header">
-		      	<a class="navbar-brand" href="index.html"><img style="height:inherit; margin-top:-15px" src="Assets/travel_hands_logo.png"></img></a>
-		    </div>
-		    <div class="collapse navbar-collapse" id="myNavbar">
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="index.html#about">ABOUT</a></li>
-		        <li><a href="#partners">ORGANIZATIONS</a></li>
-		        <li><a href="#" data-toggle="modal" data-target="#myModal">LOGIN</a></li>
-		      </ul>
-		    </div>
-	  	</div>
-	</nav>
-
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" role="dialog">
-	    <div class="modal-dialog">
-	    
-	      <!-- Modal content-->
-	      <div class="modal-content">
-	        <div class="modal-header">
-	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	          <h4 class="modal-title">Login</h4>
-	        </div>
-	        <div class="modal-body">
-	          <p>Some text in the modal.</p>
-	        </div>
-	        <div class="modal-footer">
-	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        </div>
-	      </div>
-	      
-	    </div>
-	</div>
-
-	<div id="tripSummary">
-		<span id="headerText">	
-		</span>
-	</div>
 
 	<script>
-
-		var qrStr = window.location.search;
-		var spQrStr = qrStr.substring(1);
-		var arrQrStr = new Array();
-		var arr = spQrStr.split('&');
-		var startDate, endDate = "";
-
-		for (var i=0;i<arr.length;i++){
-			var queryvalue = arr[i].split('=');
-			if(queryvalue[0] == 'startDate')
-				var  startDate=queryvalue[1];
-			else if(queryvalue[0] == 'endDate')
-				var  endDate=queryvalue[1];
-		}
-
-		startDate = startDate.replace(/\+/g, ' ');	
-		endDate = endDate.replace(/\+/g, ' ');
-
-		$('#headerText').append("Volunteering opportunities from " + startDate + " to " + endDate);
-
 		//************************ Initialize Firebase *********************//
 		var config = {
 		    apiKey: "AIzaSyAmpsaHBe-JSRoBxc-WRK9VU9xF4u3wNoE",
@@ -93,6 +33,28 @@
 		};
 		firebase.initializeApp(config);			
 	</script>
+
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  	<div class="container">
+		    <div class="navbar-header">
+		      	<a class="navbar-brand" href="#myPage"><img style="height:inherit; margin-top:-15px" src="Assets/travel_hands_logo.png"></img></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#about">ABOUT</a></li>
+		        <li><a href="#partners">ORGANIZATIONS</a></li>
+		        <li><a href="#">LOGIN</a></li>
+		      </ul>
+		    </div>
+	  	</div>
+	</nav>
+
+	<div id="tripSummary">
+		<span>			
+			Volunteering opportunities from August 15th 2016 to August 25th 2016
+		</span>
+	</div>
 
 	<!--<div id="googleMap" style="height:400px;width:100%;"></div>
 
@@ -271,7 +233,7 @@
 	</div>
 
 
-	<!-- Add Google Maps
+	<!-- Add Google Maps -->
 	
 	<script>
 	var myCenter = new google.maps.LatLng(41.878114, -87.629798);
@@ -295,7 +257,7 @@
 	}
 
 	google.maps.event.addDomListener(window, 'load', initialize);
-	</script> -->
+	</script>
 
 	<footer class="footer-distributed">
 
